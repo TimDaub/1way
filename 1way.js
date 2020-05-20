@@ -21,7 +21,6 @@ export const useState = (init, name) => {
   const fns = Array.from(document.querySelectorAll(`*[bind='{${name}}']`)).map(
     funFactory(init)
   );
-  console.log(fns);
   const setter = newValue => fns.forEach(fn => fn(newValue));
   return [init, setter];
 };
