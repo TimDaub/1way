@@ -1,0 +1,29 @@
+{
+  "name": "1way",
+  "version": "0.0.1",
+  "description": "A 1way flux-esk binding library. Like react hooks but without the react.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TimDaub/1way.git"
+  },
+  "keywords": [
+    "binding",
+    "react",
+    "hooks",
+    "two way",
+    "one way"
+  ],
+  "author": "Tim Daubenschütz <tim@daubenschuetz.de>",
+  "bugs": {
+    "url": "https://github.com/TimDaub/1way/issues"
+  },
+  "homepage": "https://github.com/TimDaub/1way#readme",
+  "devDependencies": {
+    "serve": "^11.3.0"
+  }
+}
