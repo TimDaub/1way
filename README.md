@@ -10,11 +10,17 @@ $ npm install --save 1way
 
 ## Demo
 
-Check it [here](https://timdaub.github.io/1way/)
+Check it [here](https://timdaub.github.io/1way/).
 
 ## Usage
 
 Check out [index.html](blob/master/index.html).
+
+## Changelog
+
+### 0.0.1
+
+- Initial release
 
 ## Resources:
 
