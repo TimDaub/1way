@@ -54,6 +54,10 @@ Checkout a demo [here](https://timdaub.github.io/1way/).
 
 ## Changelog
 
+### 0.0.2
+
+- Implement `integrate` functionality
+
 ### 0.0.1
 
 - Initial release

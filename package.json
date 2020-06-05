@@ -1,6 +1,6 @@
 {
   "name": "1way",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A 1way flux-esk binding library. Like react hooks but without the react.",
   "main": "1way.js",
   "scripts": {
