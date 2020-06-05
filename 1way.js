@@ -55,7 +55,8 @@ const selectors = [
         context.storage.originalText = elem.textContent;
       }
       const name = elem.getAttribute("integrate");
-      elem.textContent = context.storage.originalText.replaceAll(name, value);
+      const regexp = new RegExp(name, "g");
+      elem.textContent = context.storage.originalText.replace(regexp, value);
     }
   )
 ];
