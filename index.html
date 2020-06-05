@@ -2,24 +2,59 @@
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>1way binding</title>
+<title>1way binding</title>
 		<script type="module" src="1way.js"></script>
 		<script type="module">
 			import { useState } from "./1way.js";
 
 			const [k, setK] = useState(3, "k");
-      document.querySelector("input").oninput = ({ target }) => {
+			document.querySelector("input").oninput = ({ target }) => {
         setK(target.value);
       };
 		</script>
   </head>
   <body>
+    <pre id="code">
+&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html&#x3E;
+  &#x3C;head&#x3E;
+    &#x3C;meta charset=&#x22;utf-8&#x22;/&#x3E;
+    &#x3C;title&#x3E;1way binding&#x3C;/title&#x3E;
+    &#x3C;script type=&#x22;module&#x22; src=&#x22;1way.js&#x22;&#x3E;&#x3C;/script&#x3E;
+    &#x3C;script type=&#x22;module&#x22;&#x3E;
+      import { useState } from &#x22;./1way.js&#x22;;
+
+      const [k, setK] = useState(3, &#x22;k&#x22;);
+      document.querySelector(&#x22;input&#x22;).oninput = ({ target }) =&#x3E; {
+        setK(target.value);
+      };
+    &#x3C;/script&#x3E;
+  &#x3C;/head&#x3E;
+  &#x3C;body&#x3E;
+    &#x3C;pre id=&#x22;code&#x22; integrate=&#x22;{k}&#x22;&#x3E;
+    &#x3C;/pre&#x3E;
+    &#x3C;div&#x3E;
+      &#x3C;h1&#x3E;Demo&#x3C;/h1&#x3E;
+      &#x3C;input bind=&#x22;{k}&#x22; type=&#x22;range&#x22; min=&#x22;0&#x22; max=&#x22;100&#x22; /&#x3E;
+      &#x3C;br /&#x3E;
+      &#x3C;span bind=&#x22;span {k}&#x22;&#x3E;&#x3C;/span&#x3E;
+      &#x3C;br /&#x3E;
+      &#x3C;input type=&#x22;text&#x22; bind=&#x22;{k} minutes input&#x22; /&#x3E;
+      &#x3C;br /&#x3E;
+      &#x3C;span integrate=&#x22;{k}&#x22;&#x3E;The number "{k}" was integrated into this span tag&#x3C;/span&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+    </pre>
 		<div>
+			<h1>Demo</h1>
       <input bind="{k}" type="range" min="0" max="100" />
       <br />
-      <span bind="bla {k}"></span>
+      <span bind="slide the slider to change this value: {k}"></span>
       <br />
-      <input type="text" bind="{k} minutes" />
+      <input type="text" bind="{k} minutes input" />
+      <br />
+      <span integrate="{k}">The number "{k}" was integrated into this span tag</span>
 		</div>
   </body>
 </html>
